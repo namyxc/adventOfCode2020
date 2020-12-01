@@ -30,6 +30,7 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
+mainClassName = 'Puzzle1'
 
 apply plugin: "application"
 apply plugin: 'jacoco'
