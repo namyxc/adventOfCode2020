@@ -1,0 +1,2 @@
+object Puzzle1 {
+}
