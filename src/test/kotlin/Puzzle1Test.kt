@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
-internal class Puzzle1Test {
+internal class Puzzle1Test: PuzzleTest() {
 
     @Test
     fun `find and multiply 2 entries that sum to 2020`() {
@@ -41,6 +41,12 @@ internal class Puzzle1Test {
         assertEquals(expectedResult, multiplicated) {
             "$multiplicated should equal $expectedResult"
         }
+    }
+
+    @Test
+    fun `test main function`(){
+        Puzzle1.main(arrayOf<String>())
+        assertEquals("982464\n162292410", getConsoleOutput())
     }
 
 }
