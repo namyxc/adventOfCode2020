@@ -11,7 +11,7 @@ object Puzzle1 {
     }
 
     fun find2elementsThatSumsUp2020AndMultiply(entries: List<Int>): Int {
-        for (i in 0 until entries.size) {
+        for (i in entries.indices) {
             for (j in i + 1 until entries.size) {
                 if (entries[i] + entries[j] == 2020) {
                     return entries[i] * entries[j]
@@ -22,7 +22,7 @@ object Puzzle1 {
     }
 
     fun find3elementsThatSumsUp2020AndMultiply(entries: List<Int>): Int {
-        for (i in 0 until entries.size) {
+        for (i in entries.indices) {
             for (j in i + 1 until entries.size) {
                 for (k in j + 1 until entries.size) {
                     if (entries[i] + entries[j] + entries[k] == 2020) {

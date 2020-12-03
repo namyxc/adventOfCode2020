@@ -1,12 +1,12 @@
 object Puzzle2 {
 
-    class PasswordWithRules{
+    class PasswordWithRules(line: String) {
         val min: Int
         val max: Int
         val char: Char
         val password: String
 
-        constructor(line: String){
+        init {
             val splitBeforePassword = line.split(": ")
             password = splitBeforePassword[1]
             val splitBeforeChar = splitBeforePassword.first().split(" ")

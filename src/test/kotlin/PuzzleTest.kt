@@ -4,8 +4,8 @@ import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 
 internal open class PuzzleTest {
-    val standardOut = System.out
-    val outputStreamCaptor = ByteArrayOutputStream()
+    private val standardOut = System.out
+    private val outputStreamCaptor = ByteArrayOutputStream()
 
     @BeforeEach
     fun setUp() {

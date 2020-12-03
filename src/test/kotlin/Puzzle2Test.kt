@@ -53,7 +53,7 @@ internal class Puzzle2Test: PuzzleTest() {
 
     @Test
     fun `test main function`(){
-        Puzzle2.main(arrayOf<String>())
+        Puzzle2.main(arrayOf())
         assertEquals("396\n428", getConsoleOutput())
     }
 }

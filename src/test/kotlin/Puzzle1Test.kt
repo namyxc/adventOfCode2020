@@ -45,7 +45,7 @@ internal class Puzzle1Test: PuzzleTest() {
 
     @Test
     fun `test main function`(){
-        Puzzle1.main(arrayOf<String>())
+        Puzzle1.main(arrayOf())
         assertEquals("982464\n162292410", getConsoleOutput())
     }
 
