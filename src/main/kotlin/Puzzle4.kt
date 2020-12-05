@@ -1,5 +1,3 @@
-import kotlin.jvm.Throws
-
 object Puzzle4 {
 
     @JvmStatic
