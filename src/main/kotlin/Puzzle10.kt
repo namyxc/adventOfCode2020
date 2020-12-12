@@ -11,7 +11,6 @@ object Puzzle10 {
         println(count1and3diffInInput.first * count1and3diffInInput.second)
         val countAvailableConfigurations = countAvailableConfigurations(input)
         println(countAvailableConfigurations)
-
     }
 
 

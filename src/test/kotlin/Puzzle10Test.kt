@@ -87,6 +87,7 @@ internal class Puzzle10Test: PuzzleTest() {
             calculatedCount
         ) { "Count should be $expectedCount" }
     }
+
     @Test
     fun `test main function`(){
         Puzzle10.main(arrayOf())
