@@ -2,8 +2,6 @@ import kotlin.math.absoluteValue
 
 object Puzzle12 {
 
-
-
     @JvmStatic
     fun main(args: Array<String>) {
         val input = Puzzle12::class.java.getResource("puzzle12.txt").readText()
@@ -11,7 +9,6 @@ object Puzzle12 {
         println(calculatedDistance)
         val calculateDistanceWithWaypoint = calculateDistanceWithWaypoint(input)
         println(calculateDistanceWithWaypoint)
-
     }
 
     enum class Command {
@@ -36,8 +33,8 @@ object Puzzle12 {
 
     class ShipData(
         private var headTo: Direction,
-        var posEast: Int,
-        var posNorth: Int,
+        private var posEast: Int,
+        private var posNorth: Int,
         private var waypointPosEast: Int = 0,
         private var waypointPosNorth: Int = 0){
 
