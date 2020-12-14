@@ -1,6 +1,7 @@
 import java.math.BigInteger
 
 object Puzzle13 {
+
     @JvmStatic
     fun main(args: Array<String>) {
         val input = Puzzle13::class.java.getResource("puzzle13.txt").readText()
