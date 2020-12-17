@@ -9,16 +9,15 @@ object Puzzle16 {
         val ticketInfo = TicketInfo(input)
         println(ticketInfo.sumInvalidNumbers())
         println(ticketInfo.getProdOfDepartmentFields())
-        //641948393 too low
     }
 
 
-    class TicketInfo {
+    class TicketInfo(input: String) {
         private val rules: Rules
         private val myTicket: List<Int>
         private val otherTickets : List<List<Int>>
 
-        constructor(input: String){
+        init {
             val parts = input.split("\n\n")
             rules = Rules(parts.first().split("\n"))
             myTicket = parts[1].split("\n")[1].split(",").map(String::toInt)
@@ -41,7 +40,7 @@ object Puzzle16 {
     }
 
 
-    private class Rules{
+    private class Rules(lines: List<String>) {
 
         fun getValidTickets(ticketData: List<List<Int>>): List<List<Int>> {
             return ticketData.filterNot { ticket -> ticket.any { i -> inValid(i) } }
@@ -94,10 +93,9 @@ object Puzzle16 {
             }
         }
 
-        private val rules: MutableList<Rule>
+        private val rules: MutableList<Rule> = mutableListOf()
 
-        constructor(lines: List<String>){
-            rules = mutableListOf()
+        init {
             lines.forEach { line ->
                 val nameAndRules = line.split(": ")
                 val name = nameAndRules.first()

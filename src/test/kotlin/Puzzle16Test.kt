@@ -27,19 +27,8 @@ internal class Puzzle16Test: PuzzleTest() {
     }
 
     @Test
-    fun `product of department fileds on my ticket`(){
-        val input = "class: 0-1 or 4-19\n" +
-                "row: 0-5 or 8-19\n" +
-                "seat: 0-13 or 16-19\n" +
-                "\n" +
-                "your ticket:\n" +
-                "11,12,13\n" +
-                "\n" +
-                "nearby tickets:\n" +
-                "3,9,18\n" +
-                "15,1,5\n" +
-                "5,14,9"
-        val prodOfDepartmentFields = Puzzle16.TicketInfo(input).getProdOfDepartmentFields()
-
+    fun `test main function`(){
+        Puzzle16.main(arrayOf())
+        Assertions.assertEquals("23009\n10458887314153", getConsoleOutput())
     }
 }
